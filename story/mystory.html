@@ -2,13 +2,13 @@
 <!-- source: https://developers.google.com/maps/documentation/javascript/overview#maps_map_simple-html -->
 <html>
   <head>
-    <title>my story</title>
+    <title>My Story</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
         #map {
-          height: 100%;
+          height: 700px;
         }
 
         /* Optional: Makes the sample page fill the window. */
@@ -19,21 +19,66 @@
           padding: 0;
         }
     </style>
-    <script>
-      let map;
-
-      function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: 43.933374, lng: -80.100887},
-          zoom: 12,
-        });
-      }
+ <script>
+function initMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 14,
+    center: { lat: -50.609864, lng: 165.973117 },
+    mapTypeId: "terrain",
+  });
+  const flightPlanCoordinates = [
+    { lat: -50.604961, lng: 165.973676},
+    { lat: -50.606931, lng: 165.963139 },
+    { lat: -50.610045, lng: 165.973568 },
+    { lat: -50.606862, lng: 165.983817},
+    { lat: -50.602991, lng: 165.980858},
+    { lat: -50.604961, lng: 165.973676}
+  ];
+  const flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    geodesic: true,
+    strokeColor: "#FF0000",
+    strokeOpacity: 1.0,
+    strokeWeight: 2,
+      });
+ new google.maps.Marker({
+    position: {lat: -50.604961, lng: 165.973676},
+    map,
+    title: "Hello World!",
+  });
+ new google.maps.Marker({
+    position: { lat: -50.606931, lng: 165.963139 },
+    map,
+    title: "Hello World!",
+  });
+ new google.maps.Marker({
+    position: {lat: -50.610045, lng: 165.973568},
+    map,
+    title: "Hello World!",
+  });
+ new google.maps.Marker({
+    position: {lat: -50.606862, lng: 165.983817},
+    map,
+    title: "Hello World!",
+  });
+ new google.maps.Marker({
+    position: {lat: -50.602991, lng: 165.980858},
+    map,
+    title: "Hello World!",
+  });
+window.initMap = initMap;
+  
+  flightPath.setMap(map);
+}
+   
+window.initMap = initMap;
     </script>
   </head>
   <body>
+    <h1> all the dissapointing animals on dissapointment island<h1>
     <div id="map"></div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly" async>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly" async>
     </script>
   </body>
 </html>
