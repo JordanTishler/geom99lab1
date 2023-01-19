@@ -32,7 +32,7 @@ In this repository you will need to create content in this repository from the f
 - [x] Maps - Simple HTML Map Example
 - [x] Routes - Directions API - URL request JSON response
 - [x] Modify Dynamic Map Clustering example to show Ontario Parks
-- [ ] Create your Story using Google Dynamic Maps (JavaScript) in the provided folder
+- [x] Create your Story using Google Dynamic Maps (JavaScript) in the provided folder
 
 > Optional Tip: You can check the above boxes by editing this MarkDown document and adding an `x` between the `[ ]`, like this: `[x]`
 
@@ -59,3 +59,10 @@ _Directions API, Distance Matrix API, Geocoding API, Geolocation API, Maps Ele
 _The API Keys you must use are provided in Desire2Learn Geom99 class. It is not recommended to create your own account and keys without first consulting with the instructor._
 
 [](https://developers.google.com/maps/gmp-get-started)(Like what you see? You can find more Google Maps samples on GitHub here: [https://github.com/googlemaps/js-samples](https://github.com/googlemaps/js-samples))
+
+My maps: https://jordantishler.github.io/geom99lab1/mymaps/sharkspotters.html
+Clustering: https://jordantishler.github.io/geom99lab1/clustering/ontarioparks.html
+Simple map : https://jordantishler.github.io/geom99lab1/services/simplemap.html
+Directions API: https://jordantishler.github.io/geom99lab1/services/mydirections.html
+Final map: https://jordantishler.github.io/geom99lab1/story/mystory.html
+
