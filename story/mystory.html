@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- source: https://developers.google.com/maps/documentation/javascript/overview#maps_map_simple-html -->
-<html>
+<html lang="en">
   <head>
     <title>My Story</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -8,7 +7,7 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
         #map {
-          height: 700px;
+          height: 1000px;
         }
 
         /* Optional: Makes the sample page fill the window. */
@@ -18,15 +17,18 @@
           margin: 0;
           padding: 0;
         }
+.space {
+    padding-left: 20px;
+}
     </style>
  <script>
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 14,
     center: { lat: -50.609864, lng: 165.973117 },
-    mapTypeId: "terrain",
+    mapTypeId: "satellite",
   });
-  const flightPlanCoordinates = [
+  const Tour = [
     { lat: -50.604961, lng: 165.973676},
     { lat: -50.606931, lng: 165.963139 },
     { lat: -50.610045, lng: 165.973568 },
@@ -35,37 +37,158 @@ function initMap() {
     { lat: -50.604961, lng: 165.973676}
   ];
   const flightPath = new google.maps.Polyline({
-    path: flightPlanCoordinates,
+    path: Tour,
     geodesic: true,
-    strokeColor: "#FF0000",
+    strokeColor: "#00FF00",
     strokeOpacity: 1.0,
     strokeWeight: 2,
       });
- new google.maps.Marker({
+  {const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">The Albatross</h1>' +
+    '<div id="bodyContent">' + '<img src=alb.jpg>'+
+    "<p><b>Albatrosses</b>, of the biological family Diomedeidae, are large seabirds related to the procellariids, storm petrels, and diving petrels in the order Procellariiformes (the tubenoses). They range widely in the Southern Ocean and the North Pacific. They are absent from the North Atlantic, although fossil remains show they once occurred there and occasional vagrants are found. Albatrosses are among the largest of flying birds, and species of the genus Diomedea (great albatrosses) have the longest wingspans of any extant birds, reaching up to 3.7 m (12 ft). The albatrosses are usually regarded as falling into four genera, but disagreement exists over the number of species.</p>" +
+    '<p>learn more about the albatross here: Attribution: The kiwi, <a href="https://en.wikipedia.org/wiki/Albatross">' +
+    "https://en.wikipedia.org/wiki/Albatross</a>.</p>" +
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "The Albatross",
+  });
+ const marker = new google.maps.Marker({
     position: {lat: -50.604961, lng: 165.973676},
     map,
-    title: "Hello World!",
+    title: "The Albatross",
+    label: "1",
+    Color: "#00FF00",
+    animation: google.maps.Animation.DROP
   });
- new google.maps.Marker({
-    position: { lat: -50.606931, lng: 165.963139 },
+    marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  })
+}
+{const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">The Northern Giant petrel chick!</h1>' +
+    '<div id="bodyContent">' + '<img src=north.jpg>'+
+    "<p><b>The northern giant petrel </b>(Macronectes halli), also known as Hall's giant petrel, is a large predatory seabird of the southern oceans. Its distribution overlaps broadly, but is slightly north of, the similar southern giant petrel (Macronectes giganteus)</p>" +
+    '<p>learn more at: <a href="https://en.wikipedia.org/wiki/Northern_giant_petrel">' +
+    "https://en.wikipedia.org/wiki/Northern_giant_petrel</a>.</p>" +
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "The Northern Giant petrel chick",
+  });
+ const marker = new google.maps.Marker({
+    position: {lat: -50.606931, lng: 165.963139},
     map,
-    title: "Hello World!",
+    title: "The Northern Giant petrel chick",
+    label: "2",
+    animation: google.maps.Animation.DROP
   });
- new google.maps.Marker({
+    marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  })
+}    
+{const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">The White-capped Mollymawk</h1>' +
+    '<div id="bodyContent">' + '<img src=white.jpg>'+
+    "<p><b>The white-capped Mollymawk (Thalassarche cauta steadi) also known as The white-capped Albatross is a mollymawk that breeds on the islands off of New Zealand. Not all experts agree that this form should be recognized as a separate species from the shy albatross, Thalassarche cauta. It is a medium-sized black, slate gray, and white albatross and is the largest of the mollymawks." +
+    '<p>learn more at:<a href="https://en.wikipedia.org/wiki/White-capped_albatross">' +
+    "hhttps://en.wikipedia.org/wiki/White-capped_albatross</a>.</p>" +
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "TThe White-capped Mollymawk",
+  });
+ const marker = new google.maps.Marker({
     position: {lat: -50.610045, lng: 165.973568},
     map,
-    title: "Hello World!",
+    title: "The White-capped Mollymawk",
+    label: "3",
+    animation: google.maps.Animation.DROP
   });
- new google.maps.Marker({
+    marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  })
+}
+{const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">The Auckland Island snipe</h1>' +
+    '<div id="bodyContent">' + '<img src=snipe.jpg>'+
+    "<p><b>The Auckland Island snipe</b> also known as The Subantarctic snipe (Coenocorypha aucklandica) is a species of snipe endemic to New Zealand's subantarctic islands. The Maori call it Tutukiwi. The nominate race C. a. aucklandica (Auckland snipe) is found on the Auckland Islands (excluding the main island). Other subspecies include C. a. meinertzhagenae (Antipodes snipe) from the Antipodes Islands, and C. a. perseverance (Campbell snipe) from Campbell Island. The former subspecies from the Snares Islands has been separated as a full species, the Snares snipe (C. huegeli), as have the extinct South Island (C. iredalei) and North Island snipes (C. barrierensis).</p>" +
+    '<p>learn more at: <a href="https://en.wikipedia.org/wiki/Subantarctic_snipe">' +
+    "https://en.wikipedia.org/wiki/Subantarctic_snipe</a>.</p>" +
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "The Auckland Island snipe",
+  });
+ const marker = new google.maps.Marker({
     position: {lat: -50.606862, lng: 165.983817},
     map,
-    title: "Hello World!",
+    title: "The Auckland Island snipe",
+    label: "4",
+    animation: google.maps.Animation.DROP
   });
- new google.maps.Marker({
+    marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  })
+}
+{const contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">The White-chinned petrel</h1>' +
+    '<div id="bodyContent">' + '<img src=petrel.jpg>'+
+    "<p><b>The white-chinned petrel</b> (Procellaria aequinoctialis) also known as the Cape hen and shoemaker, is a large shearwater in the family Procellariidae. It ranges around the Southern Ocean as far north as southern Australia, Peru and Namibia, and breeds colonially on scattered islands. The white-chinned petrel was formerly considered to be conspecific with the spectacled petrel (Procellaria conspicillata).</p>" +
+    '<p>learn more at: <a href="https://en.wikipedia.org/wiki/White-chinned_petrel">' +
+    "https://en.wikipedia.org/wiki/White-chinned_petrel</a></p> " +
+    "</div>" +
+    "</div>";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+    ariaLabel: "The White-chinned petrel",
+  });
+ const marker = new google.maps.Marker({
     position: {lat: -50.602991, lng: 165.980858},
     map,
-    title: "Hello World!",
+    title: "The White-chinned petrel",
+    label: "5",
+    animation: google.maps.Animation.DROP,
   });
+    marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  })
+}
 window.initMap = initMap;
   
   flightPath.setMap(map);
@@ -75,10 +198,15 @@ window.initMap = initMap;
     </script>
   </head>
   <body>
-    <h1> all the dissapointing animals on dissapointment island<h1>
-    <div id="map"></div>
+    <div class="space">
+    <h1>Dissapointment Island<h1>
+    <h3> Just some of the supriseingly amazing birds on Dissapointment Island<h3>
+    <h4> Click on any of the below markers for more information on each bird<h4>
+    <h5> See any of the other birds at this link: <a href="https://blog.tepapa.govt.nz/2018/02/09/wildlife-highlights-of-disappointment-island/#:~:text=The%20most%20abundant%20petrel%20species,shearwaters%2C%20and%20common%20diving%20petrels."> birds</a><h5>            
+    </div>
+        <div id="map"></div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly" async>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly" async>
     </script>
   </body>
 </html>
