@@ -60,9 +60,17 @@ _The API Keys you must use are provided in Desire2Learn Geom99 class. It is not 
 
 [](https://developers.google.com/maps/gmp-get-started)(Like what you see? You can find more Google Maps samples on GitHub here: [https://github.com/googlemaps/js-samples](https://github.com/googlemaps/js-samples))
 
-My maps: https://jordantishler.github.io/geom99lab1/mymaps/sharkspotters.html
-Clustering: https://jordantishler.github.io/geom99lab1/clustering/ontarioparks.html
-Simple map : https://jordantishler.github.io/geom99lab1/services/simplemap.html
-Directions API: https://jordantishler.github.io/geom99lab1/services/mydirections.html
+My maps: 
+https://jordantishler.github.io/geom99lab1/mymaps/sharkspotters.html
+
+Clustering: 
+https://jordantishler.github.io/geom99lab1/clustering/ontarioparks.html
+
+Simple map : 
+https://jordantishler.github.io/geom99lab1/services/simplemap.html
+
+Directions API: 
+https://jordantishler.github.io/geom99lab1/services/mydirections.html
+
 Final map: https://jordantishler.github.io/geom99lab1/story/mystory.html
 
