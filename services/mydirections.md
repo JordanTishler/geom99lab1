@@ -9,7 +9,7 @@ Be creative and use multiple parameters from the API documentation to earn a top
 ## Directions URL
 
 ```
-[https://maps.googleapis.com/maps/api/directions/json?origin=386+367,+Side+Rd+20,+Mono,+ON+L9W+6V4&waypoints=207219,+ON-9,+Mono,+ON+L9W+6J1&destination=Fleming+College+-+Frost+Campus?departure_time=1687906800?&mode=driving?avoid=tolls|highways&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE](https://maps.googleapis.com/maps/api/directions/json?&origin=Fleming+College+-+Frost+Campus&waypoints=207219,+ON-9,+Mono,+ON+L9W+6J1&destination=386+367,+Side+Rd+20,+Mono,+ON+L9W+6V4&departure_time=1687906800&mode=driving&avoid=tolls|highways&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE]
+https://maps.googleapis.com/maps/api/directions/json?&origin=Fleming+College+-+Frost+Campus&waypoints=207219,+ON-9,+Mono,+ON+L9W+6J1&destination=386+367,+Side+Rd+20,+Mono,+ON+L9W+6V4&departure_time=1687906800&mode=driving&avoid=tolls|highways&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
 ```
 
 ## Next paste the full JSON response to this query here:
