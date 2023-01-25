@@ -19,6 +19,19 @@
           margin: 0;
           padding: 0;
         }
+.line {
+  text-decoration-line: none;
+}
+.line:hover {
+  color: red;
+}
+.line:after {
+  color: purple;
+}
+
+.backing {
+  background-color: gray;
+}
 .space {
     padding-left: 20px;
 }
@@ -199,12 +212,12 @@ window.initMap = initMap;
 window.initMap = initMap;
     </script>
   </head>
-  <body>
+  <body class="backing">
     <div class="space">
-    <h1>Tour of Dissapointment Island</h1>
+    <h1>Tour of Dissapointment Island's Birds</h1>
     <h3> Just some of the supriseingly amazing birds on Dissapointment Island</h3>
     <h4> Click on any of the below markers in any order for information on each bird</h4>
-    <h5> See any of the other birds at this link: <a href="https://blog.tepapa.govt.nz/2018/02/09/wildlife-highlights-of-disappointment-island/#:~:text=The%20most%20abundant%20petrel%20species,shearwaters%2C%20and%20common%20diving%20petrels."> birds</a></h5>            
+    <h4> See any of the other birds at this link: <a class = "line" href="https://blog.tepapa.govt.nz/2018/02/09/wildlife-highlights-of-disappointment-island/#:~:text=The%20most%20abundant%20petrel%20species,shearwaters%2C%20and%20common%20diving%20petrels."> birds</a></h4>            
     </div>
         <div id="map"></div>
 
